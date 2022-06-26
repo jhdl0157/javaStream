@@ -1,5 +1,7 @@
 package Chapter5;
 
+import util.User;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,11 +11,11 @@ import java.util.function.BiFunction;
 public class Chapter5Section3 {
     public static void main(String[] args) {
         Map<String,BiFunction<String,String,Car>> carTypeToConstructorMap= new HashMap<>();
-        User user=new User(1,"allies");
-        BiFunction<Integer,String,User> userCreate=(Integer id,String name)-> new User(id,name);
-        BiFunction<Integer,String,User> userCreate2= User::new;
-        User charlie=userCreate2.apply(1,"안녕");
-        System.out.println(charlie.toString());
+//        User user=new User(1,"allies");
+//        BiFunction<Integer,String,User> userCreate=(Integer id,String name)-> new User(id,name);
+//        BiFunction<Integer,String,User> userCreate2= User::new;
+//        User charlie=userCreate2.apply(1,"안녕");
+//        System.out.println(charlie.toString());
 
         String[][] inputs=new String[][]{
                 {"sedan","Sonata","Hyundai"},
