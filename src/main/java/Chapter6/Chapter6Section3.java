@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class Chapter6Section3 {
     //Map에대해서 알아보자
-    //데이터를 변형하는데 사용 데이터에 함수가 적용된 결과물을 제공하는 stream리턴
+    //데이터를 변형하는데 사용 데이터에 함수가 적용된 결과물을 제공하는 Stream 리턴
     public static void main(String[] args) {
         List<Integer> numberList = Arrays.asList(3, 6, -4);
         Stream<Integer> numberStream = numberList.stream();
@@ -74,7 +74,9 @@ public class Chapter6Section3 {
                 .setStatus(Order.OrderStatus.IN_PROGRESS)
                 .setCreatedByUserId(105);
         List<Order> orders=Arrays.asList(order1,order2,order3,order4,order5);
-        //TODO:
+        //TODO:누가 만들었는지에 대한 리스트 만들어 보기
+        List<Long> createdByIdOrderList=orders.stream().map(Order::getCreatedByUserId).toList();
+        System.out.println(createdByIdOrderList);
 
     }
 }
