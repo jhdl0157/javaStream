@@ -1,3 +1,5 @@
+package Chapter4;
+
 import util.TriFunction;
 
 import java.util.function.BiFunction;
