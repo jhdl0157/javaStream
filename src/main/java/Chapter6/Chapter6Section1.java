@@ -22,5 +22,11 @@ public class Chapter6Section1 {
         Stream<Integer> numberStream=numberSet.stream();
         List<Integer> numberList=numberStream.collect(Collectors.toList());
         System.out.println(numberList);
+
+//        TODO 총 정리
+//                스트림은 데이터의 흐름
+//                여러 개의 중간 처리를 할수 있음
+//                Filter, Map, Sorted, Distinct, FlatMap
+
     }
 }
