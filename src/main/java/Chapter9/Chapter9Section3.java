@@ -5,6 +5,7 @@ import Chapter9.model.OrderLine;
 import Chapter9.priceprocessor.OrderLineAggregationPriceProcessor;
 import Chapter9.priceprocessor.TaxPriceProcessor;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +13,10 @@ import java.util.function.Function;
 
 public class Chapter9Section3 {
     public static void main(String[] args) {
+        File file=new File("D:\\javaSsg\\src\\main\\java\\data\\5.json");
+        if(file.delete()){
+            System.out.println("파일 삭제 완료");
+        }
         // Function Composition
         Function<Integer,Integer> multiplyByTwo=x-> x*2;
         Function<Integer,Integer> addTen=x-> x+10;
